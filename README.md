@@ -29,7 +29,7 @@ The objective of the project is to create a predictive model that predicts playe
 
 - `all_nba.ipynb`: Jupyter Notebook containing the data analysis process including data loading, preprocessing, modeling, and evaluation.
 
-### Plot Descriptions:
+### Plot and Statistics Descriptions:
 
 1. **Number of All-NBA Nominations for Top 20 Players:**
    - Displays the number of All-NBA nominations for the top 20 players with the highest number of nominations.
