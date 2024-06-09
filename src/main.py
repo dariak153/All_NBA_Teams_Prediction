@@ -1,27 +1,10 @@
-from nba_api.stats.static import players
-from nba_api.stats.endpoints import playercareerstats
-from nba_api.stats.endpoints import commonplayerinfo
-from nba_api.stats.endpoints import playerawards
-from nba_api.stats.endpoints import boxscoreadvancedv2
-from nba_api.stats.endpoints import leaguegamefinder
-from nba_api.stats.endpoints import leagueleaders
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBClassifier
-from sklearn.svm import SVR
-from sklearn.preprocessing import LabelEncoder
-from itertools import product
-from bs4 import BeautifulSoup
-from lxml import html
-import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 import pandas as pd
 import numpy as np
-import time
 import json
-import requests
-import json
-import os
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestRegressor
+import pickle
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKDIR = os.path.join(ROOT_DIR, '..', 'data')
@@ -118,6 +101,10 @@ def save_results(result_json, filename):
     with open(filename, 'w') as file:
         json.dump(result_json, file, indent=4)
 
+def save_model(model, scaler, filename):
+    with open(filename, 'wb') as file:
+        pickle.dump({'model': model, 'scaler': scaler}, file)
+
 if __name__ == "__main__":
     missing_files = check_files_exist(WORKDIR, REQUIRED_FILES)
     if missing_files:
@@ -135,3 +122,4 @@ if __name__ == "__main__":
         result = predict_new_season(random_forest, to_predict, train_features.columns, scaler)
         result_json = generate_award_predictions(result, not_rookies)
         save_results(result_json, os.path.join(ROOT_DIR, "Daria_Kubacka.json"))
+        save_model(random_forest, scaler, os.path.join(ROOT_DIR, "random_forest_model.pkl"))
