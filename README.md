@@ -75,7 +75,7 @@ The objective of the project is to create a predictive model that predicts playe
 * The "DRAFT_YEAR" and "DRAFT_NUMBER" columns are converted to integer type, with undrafted players assigned a value of -1.
 * Categorical data in the "TEAM_ABBREVIATION" column is converted to dummy variables.
 
-  ### [ standardize function ](https://github.com/dariak153/Prediction_Awards/blob/1938cd594d48ab4ff5ed1781081064ec27659b36/src/main.py#L66-L72)
+ ### [ standardize function ](https://github.com/dariak153/Prediction_Awards/blob/1938cd594d48ab4ff5ed1781081064ec27659b36/src/main.py#L66-L72)
   
  - The standardize_features function standardizes the features using a StandardScaler. This ensures that all features have a mean of 0 and a standard deviation of 1.
    
