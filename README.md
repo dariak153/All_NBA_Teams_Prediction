@@ -2,7 +2,7 @@
 
 The objective of the project is to create a predictive model that predicts players for the All-NBA Team and All-Rookie Team based on statistical data from the file `NBA_Seasons_Dates.csv`.
 
-## Results 
+## Results ALL-NBA
 
 | All-NBA Team   | Player 1             | Player 2          | Player 3        | Player 4            | Player 5          |
 |----------------|----------------------|-------------------|-----------------|---------------------|-------------------|
@@ -10,7 +10,9 @@ The objective of the project is to create a predictive model that predicts playe
 | **Second Team**| Anthony Edwards      | Kevin Durant     | LeBron James    | Nikola Jokic        | Paolo Banchero    |
 | **Third Team** | Jalen Brunson        | De'Aaron Fox     | DeMar DeRozan  | Domantas Sabonis    | Devin Booker      |
 
-| Rookie All-NBA Team        | Player 1           | Player 2          | Player 3             | Player 4          | Player 5          |
+## Results ALL-Rookie
+
+| Rookie All-Rookie Team        | Player 1           | Player 2          | Player 3             | Player 4          | Player 5          |
 |----------------------------|--------------------|-------------------|----------------------|-------------------|-------------------|
 | **First Team**             | Victor Wembanyama | Chet Holmgren     | Brandon Miller       | Keyonte George    | Scoot Henderson   |
 | **Second Team**            | Jaime Jaquez Jr.  | Amen Thompson     | Brandin Podziemski  | Cason Wallace     | Ausar Thompson    |
@@ -28,6 +30,7 @@ The objective of the project is to create a predictive model that predicts playe
 ### [preprocess_data ](https://github.com/dariak153/Prediction_Awards/blob/1938cd594d48ab4ff5ed1781081064ec27659b36/src/main.py#L45-L56)
 
 - The preprocess_data function prepares the player statistics data by performing the following steps:
+  
  * Dropping Unnecessary Columns: Columns that are not needed for analysis are removed.
  * Converting Data Types: The "GP" (games played) column is converted to integers to ensure proper numerical operations.
  * Filtering Players: Only players who played more than 40 games in a season are retained.
