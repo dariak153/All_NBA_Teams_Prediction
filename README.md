@@ -1,6 +1,6 @@
 # NBA Prediction Project
 
-The objective of the project is to create a predictive model that predicts players for the All-NBA Team and All-Rookie Team based on statistical data from the file `NBA_Seasons_Dates.csv`.
+The objective of the project is to create a predictive model that predicts players for the All-NBA Team and All-Rookie Team based on statistical data.
 
 ## Results ALL-NBA
 
@@ -16,6 +16,38 @@ The objective of the project is to create a predictive model that predicts playe
 |----------------------------|--------------------|-------------------|----------------------|-------------------|-------------------|
 | **First Team**             | Victor Wembanyama | Chet Holmgren     | Brandon Miller       | Keyonte George    | Scoot Henderson   |
 | **Second Team**            | Jaime Jaquez Jr.  | Amen Thompson     | Brandin Podziemski  | Cason Wallace     | Ausar Thompson    |
+
+
+### Methods Used
+
+- Loading data from a CSV file
+- Data preprocessing including handling missing values, standardization, and feature selection
+- Modeling using Random Forest Classifier for player classification
+- Evaluation of different models including Random Forest, Support Vector Regressor (SVR), and XGBoost
+
+### Files Overview
+
+- `all_nba.ipynb`: Jupyter Notebook containing the data analysis process including data loading, preprocessing, modeling, and evaluation.
+
+### Plot Descriptions:
+
+1. **Number of All-NBA Nominations for Top 20 Players:**
+   - Displays the number of All-NBA nominations for the top 20 players with the highest number of nominations.
+   
+2. **Feature Correlation Matrix:**
+   - Illustrates how various features correlate with each other, aiding in feature selection and understanding feature relationships.
+
+3. **Features Most Correlated with All-NBA Nomination:**
+   - Presents the features (player statistics) most correlated with All-NBA nomination, helping identify key predictors.
+
+4. **Average Age of All-NBA Nominated Players in Each Season:**
+   - Shows the average age of players nominated for All-NBA in each season, indicating if age influences nomination chances.
+
+5. **Teams with the Most Players in All-NBA:**
+   - Displays teams with the highest number of players nominated for All-NBA, highlighting teams with significant impact.
+
+6. **Teams with the Most Players in All-NBA in Each Season:**
+   - Shows teams with the highest number of players nominated for All-NBA in each season, indicating changes in dominant teams over time.
 
 
 ## 2. Implementation
