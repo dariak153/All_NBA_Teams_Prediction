@@ -1,10 +1,28 @@
-import os
-import pandas as pd
-import numpy as np
-import json
+from nba_api.stats.static import players
+from nba_api.stats.endpoints import playercareerstats
+from nba_api.stats.endpoints import commonplayerinfo
+from nba_api.stats.endpoints import playerawards
+from nba_api.stats.endpoints import boxscoreadvancedv2
+from nba_api.stats.endpoints import leaguegamefinder
+from nba_api.stats.endpoints import leagueleaders
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
-import pickle
+from xgboost import XGBClassifier
+from sklearn.svm import SVR
+from sklearn.preprocessing import LabelEncoder
+from itertools import product
+from bs4 import BeautifulSoup
+from lxml import html
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import time
+import json
+import requests
+import json
+import os
+
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 WORKDIR = os.path.join(ROOT_DIR, '..', 'data')
