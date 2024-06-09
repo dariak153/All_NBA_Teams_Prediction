@@ -12,7 +12,7 @@ The objective of the project is to create a predictive model that predicts playe
 
 ## Results ALL-Rookie
 
-| Rookie All-Rookie Team        | Player 1           | Player 2          | Player 3             | Player 4          | Player 5          |
+| All-Rookie Team        | Player 1           | Player 2          | Player 3             | Player 4          | Player 5          |
 |----------------------------|--------------------|-------------------|----------------------|-------------------|-------------------|
 | **First Team**             | Victor Wembanyama | Chet Holmgren     | Brandon Miller       | Keyonte George    | Scoot Henderson   |
 | **Second Team**            | Jaime Jaquez Jr.  | Amen Thompson     | Brandin Podziemski  | Cason Wallace     | Ausar Thompson    |
